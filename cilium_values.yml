@@ -578,7 +578,7 @@ certgen:
 
 hubble:
   # -- Enable Hubble (true by default).
-  enabled: false
+  enabled: true
 
   # -- Buffer size of the channel Hubble uses to receive monitor events. If this
   # value is not set, the queue size is set to the default monitor queue size.
@@ -709,7 +709,7 @@ hubble:
 
   relay:
     # -- Enable Hubble Relay (requires hubble.enabled=true)
-    enabled: false
+    enabled: true
 
     # -- Roll out Hubble Relay pods automatically when configmap is updated.
     rollOutPods: false
@@ -840,7 +840,7 @@ hubble:
 
   ui:
     # -- Whether to enable the Hubble UI.
-    enabled: false
+    enabled: true
 
     standalone:
       # -- When true, it will allow installing the Hubble UI only, without checking dependencies.
@@ -1189,7 +1189,7 @@ vtep:
 # -- cilium-monitor sidecar.
 monitor:
   # -- Enable the cilium-monitor sidecar.
-  enabled: false
+  enabled: true
 
 # -- Configure service load balancing
 #loadBalancer:

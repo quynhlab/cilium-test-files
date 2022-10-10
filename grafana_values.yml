@@ -329,8 +329,8 @@ initChownData:
   #    cpu: 100m
   #    memory: 128Mi
     requests:
-      cpu: 10000m
-      memory: 20000Mi
+      cpu: 1000m
+      memory: 2000Mi
 
 
 # Administrator credentials when not using an existing secret (see below)

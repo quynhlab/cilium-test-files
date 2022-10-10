@@ -1,0 +1,81 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loderunner
+  namespace: loderunner
+  labels:
+    app.kubernetes.io/name: loderunner
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9090"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: loderunner
+  template:
+    metadata:
+      labels:
+        app: loderunner
+        deploy: 22-09-27-06-20-34
+        version: beta-2209-27-06
+    spec:
+      containers:
+        - name: app
+          image: ghcr.io/retaildevcrews/ngsa-lr:beta
+          imagePullPolicy: Always
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+            runAsNonRoot: true
+            runAsUser: 10001
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "1000m"
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /version
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /version
+              port: http
+          args:
+          - -l
+          - "25"
+          - -r
+          - -s
+          - http://ngsa-memory.ngsa:8080
+          - -f
+          - benchmark.json
+          - -p
+      automountServiceAccountToken: false
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: loderunner
+  namespace: loderunner
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: loderunner

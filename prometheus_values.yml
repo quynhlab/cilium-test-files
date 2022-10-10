@@ -1047,8 +1047,8 @@ server:
       cpu: 50000m
       memory: 1800000Mi
     requests:
-      cpu: 47000m
-      memory: 180000Mi
+      cpu: 3000m
+      memory: 8000Mi
 
   # Required for use in managed kubernetes clusters (such as AWS EKS) with custom CNI (such as calico),
   # because control-plane managed by AWS cannot communicate with pods' IP CIDR and admission webhooks are not working
@@ -1451,6 +1451,33 @@ serverFiles:
         static_configs:
           - targets:
             - localhost:9090
+      
+      - job_name: 'ngsa-memory'
+        scrape_interval: 30s
+        metrics_path: /metrics
+        kubernetes_sd_configs:
+        - role: pod
+          namespaces:
+            names:
+            - ngsa
+          selectors:
+            - role: "pod"
+              label: "app=ngsa-memory"
+              field: "status.phase=Running"
+      
+      - job_name: 'loderunner'
+        scrape_interval: 30s
+        metrics_path: /metrics
+        kubernetes_sd_configs:
+        - role: pod
+          namespaces:
+            names:
+            - loderunner
+          selectors:
+            - role: "pod"
+              label: "app=loderunner"
+              field: "status.phase=Running"    
+
 
       # A scrape configuration for running Prometheus on a Kubernetes cluster.
       # This uses separate scrape configs for cluster components (i.e. API server, node)
@@ -1743,6 +1770,8 @@ serverFiles:
       # to set this to `https` & most likely set the `tls_config` of the scrape config.
       # * `prometheus.io/path`: If the metrics path is not `/metrics` override this.
       # * `prometheus.io/port`: Scrape the pod on the indicated port instead of the default of `9102`.
+      
+      
       - job_name: 'kubernetes-pods'
         honor_labels: true
 
