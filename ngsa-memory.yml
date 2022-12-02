@@ -25,6 +25,8 @@ spec:
         version: beta-2209-25-06
         deploy: 22-09-25-06-06-57
     spec:
+      nodeSelector:
+        node: worker
       containers:
         - name: app
           image: ghcr.io/retaildevcrews/ngsa-app:beta

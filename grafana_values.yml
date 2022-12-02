@@ -234,7 +234,9 @@ resources: {}
 ## Node labels for pod assignment
 ## ref: https://kubernetes.io/docs/user-guide/node-selection/
 #
-nodeSelector: {}
+nodeSelector: {
+  node: prom
+}
 
 ## Tolerations for pod assignment
 ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
@@ -842,7 +844,9 @@ imageRenderer:
   ## Node labels for pod assignment
   ## ref: https://kubernetes.io/docs/user-guide/node-selection/
   #
-  nodeSelector: {}
+  nodeSelector: {
+    node: prom
+  }
 
   ## Tolerations for pod assignment
   ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/

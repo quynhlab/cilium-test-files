@@ -20,6 +20,8 @@ spec:
         deploy: 22-09-27-06-20-34
         version: beta-2209-27-06
     spec:
+      nodeSelector:
+        node: worker
       containers:
         - name: app
           image: ghcr.io/retaildevcrews/ngsa-lr:beta
@@ -52,7 +54,7 @@ spec:
               port: http
           args:
           - -l
-          - "25"
+          - "100"
           - -r
           - -s
           - http://ngsa-memory.ngsa:8080
