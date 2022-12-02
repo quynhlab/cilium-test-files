@@ -26,14 +26,14 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 10915,
   "graphTooltip": 0,
-  "id": 10,
+  "id": 2,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "87qZkn4Vz"
+        "uid": "GW79EcF4z"
       },
       "fieldConfig": {
         "defaults": {
@@ -114,7 +114,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "87qZkn4Vz"
+            "uid": "GW79EcF4z"
           },
           "editorMode": "code",
           "expr": "sum(kube_pod_status_phase{namespace=~\"ngsa\", phase=\"Running\",pod=~\"$service.*\"})",
@@ -125,7 +125,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "87qZkn4Vz"
+            "uid": "GW79EcF4z"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -141,7 +141,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "87qZkn4Vz"
+            "uid": "GW79EcF4z"
           },
           "editorMode": "code",
           "expr": "sum(kube_pod_status_phase{pod=~\"$service.*\"})",
@@ -157,7 +157,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "87qZkn4Vz"
+        "uid": "GW79EcF4z"
       },
       "fieldConfig": {
         "defaults": {
@@ -238,7 +238,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "87qZkn4Vz"
+            "uid": "GW79EcF4z"
           },
           "editorMode": "code",
           "expr": "sum(kube_pod_status_phase{namespace=~\"loderunner\",phase=\"Running\",pod=~\"loderunner.*\"})",
@@ -249,7 +249,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "87qZkn4Vz"
+            "uid": "GW79EcF4z"
           },
           "editorMode": "code",
           "exemplar": false,
@@ -265,7 +265,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "87qZkn4Vz"
+            "uid": "GW79EcF4z"
           },
           "editorMode": "code",
           "expr": "sum(kube_pod_status_phase{namespace=~\"loderunner\",pod=~\"loderunner.*\"})",
@@ -281,7 +281,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "87qZkn4Vz"
+        "uid": "GW79EcF4z"
       },
       "fieldConfig": {
         "defaults": {
@@ -362,7 +362,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "87qZkn4Vz"
+            "uid": "GW79EcF4z"
           },
           "editorMode": "code",
           "expr": "kube_horizontalpodautoscaler_status_current_replicas{namespace=\"ngsa\",horizontalpodautoscaler=\"ngsa-memory\"}",
@@ -444,7 +444,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -564,7 +564,7 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "targets": [
         {
           "datasource": {
@@ -642,7 +642,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -733,7 +733,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -815,7 +815,8 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": {
-        "uid": "$datasource"
+        "type": "prometheus",
+        "uid": "GW79EcF4z"
       },
       "description": "",
       "fieldConfig": {
@@ -854,7 +855,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -865,11 +866,14 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "type": "prometheus",
+            "uid": "GW79EcF4z"
           },
+          "editorMode": "code",
           "expr": "sum(rate(NgsaAppDuration_count{region=~\"$region\",service=~\"$service.*\",code=~\"Warn|Error\",mode=~\"$mode\"}[1m]))",
           "interval": "1m",
           "legendFormat": "{{category}}",
+          "range": true,
           "refId": "A"
         }
       ],
@@ -910,7 +914,8 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": {
-        "uid": "$datasource"
+        "type": "prometheus",
+        "uid": "GW79EcF4z"
       },
       "description": "",
       "fieldConfig": {
@@ -949,7 +954,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -960,7 +965,8 @@
       "targets": [
         {
           "datasource": {
-            "uid": "$datasource"
+            "type": "prometheus",
+            "uid": "GW79EcF4z"
           },
           "expr": "sum(rate(NgsaAppDuration_count{region=~\"$region\",service=~\"$service.*\",code = \"Retry\"}[1m]))",
           "interval": "1m",
@@ -1126,6 +1132,6 @@
   "timezone": "",
   "title": "NGSA - Prometheus",
   "uid": "0R0tvyVVz",
-  "version": 8,
+  "version": 1,
   "weekStart": ""
 }

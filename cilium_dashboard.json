@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 15513,
   "graphTooltip": 1,
-  "id": 2,
+  "id": 1,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -75,7 +75,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -176,7 +176,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -286,7 +286,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -428,7 +428,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -526,7 +526,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -615,10 +615,15 @@
       "id": 144,
       "links": [],
       "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
         "content": "",
         "mode": "markdown"
       },
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "targets": [
         {
           "datasource": {
@@ -676,7 +681,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -774,7 +779,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -872,7 +877,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -937,10 +942,15 @@
       "id": 47,
       "links": [],
       "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
         "content": "",
         "mode": "markdown"
       },
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "targets": [
         {
           "datasource": {
@@ -994,7 +1004,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1090,7 +1100,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1209,7 +1219,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1367,7 +1377,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1459,7 +1469,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1582,7 +1592,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1742,7 +1752,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1851,7 +1861,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1947,7 +1957,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2039,7 +2049,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2104,10 +2114,15 @@
       "id": 73,
       "links": [],
       "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
         "content": "",
         "mode": "markdown"
       },
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "targets": [
         {
           "datasource": {
@@ -2163,7 +2178,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2257,7 +2272,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2354,7 +2369,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2417,10 +2432,15 @@
       "id": 74,
       "links": [],
       "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
         "content": "",
         "mode": "markdown"
       },
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "targets": [
         {
           "datasource": {
@@ -2445,10 +2465,15 @@
       "id": 60,
       "links": [],
       "options": {
+        "code": {
+          "language": "plaintext",
+          "showLineNumbers": false,
+          "showMiniMap": false
+        },
         "content": "",
         "mode": "markdown"
       },
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "targets": [
         {
           "datasource": {
@@ -2506,7 +2531,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2606,7 +2631,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2705,7 +2730,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2803,7 +2828,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2901,7 +2926,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2997,7 +3022,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3091,7 +3116,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -3185,7 +3210,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -3283,7 +3308,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -3385,7 +3410,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -3479,7 +3504,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -3579,7 +3604,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -3677,7 +3702,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.5",
+      "pluginVersion": "9.3.0",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -3745,7 +3770,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "87qZkn4Vz"
+          "uid": "GW79EcF4z"
         },
         "definition": "label_values(kube_pod_created{pod=~\"^cilium-[a-z|A-Z|0-9]+$\"},pod)",
         "hide": 0,
@@ -3799,6 +3824,6 @@
   "timezone": "utc",
   "title": "Cilium v1.11 Agent Metrics",
   "uid": "vtuWtdumz",
-  "version": 1,
+  "version": 2,
   "weekStart": ""
 }
