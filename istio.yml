@@ -4,7 +4,7 @@
 pilot:
   autoscaleEnabled: true
   autoscaleMin: 3
-  autoscaleMax: 500
+  autoscaleMax: 1500
   replicaCount: 3
   rollingMaxSurge: 100%
   rollingMaxUnavailable: 25%
@@ -19,8 +19,11 @@ pilot:
   # Resources for a small pilot install
   resources:
     requests:
+      cpu: 250m
+      memory: 1Gi
+    limits:
       cpu: 1500m
-      memory: 12048Mi
+      memory: 6Gi
 
   env: {}
 

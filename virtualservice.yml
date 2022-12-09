@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: httpbin
+  name: ngsa-memory
   namespace: istio-ingress
 spec:
   hosts:
@@ -13,4 +13,4 @@ spec:
     - destination:
         port:
           number: 8080
-        host: ms-aks-demo.loderunner.svc.cluster.local
+        host: ngsa-memory.ngsa.svc.cluster.local
