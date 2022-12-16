@@ -7,7 +7,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - istio-gateway
+  - istio-ingress/ngsa-gateway
   http:
   - route:
     - destination:

@@ -54,10 +54,10 @@ spec:
               port: http
           args:
           - -l
-          - "100"
+          - "10"
           - -r
           - -s
-          - http://ngsa-memory.ngsa:8080
+          - http://172.16.128.8:80
           - -f
           - benchmark.json
           - -p
