@@ -5,10 +5,11 @@ export default function () {
 
     let maxSleep=0;
     let res
-    let baseURL='https://ngsa-cosmos-westus3-dev.austinrdc.dev';
+    let baseURL='http://ngsa-memory.ngsa.svc.cluster.local:8080';
     
     //Request #1
-    res=http.get(baseURL+'/version');
+    res=http.get(baseURL+'/api/featured/movie');
+    /*
     //LR script contains validator: 'contentType'
     //LR script contains validator: 'minLength'
     //LR script contains validator: 'maxLength'
@@ -1294,5 +1295,5 @@ export default function () {
             {url: res.request.url}
         );
     sleep(Math.random() * maxSleep)
-
+*/
 }
