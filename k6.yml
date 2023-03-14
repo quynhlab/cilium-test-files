@@ -24,6 +24,9 @@ spec:
         node: worker
       containers:
         - name: app
+          env:
+          - name: "K6_PROMETHEUS_RW_SERVER_URL"
+            value: "http://prometheus-community-server.monitoring.svc.cluster.local:80/api/v1/write"
           image: loadimpact/k6:latest
           imagePullPolicy: Always
           securityContext:
@@ -39,11 +42,11 @@ spec:
               protocol: TCP
           resources:
             limits:
-              memory: "512Mi"
-              cpu: "1000m"
+              memory: "1024Mi"
+              cpu: "2000m"
             requests:
               memory: "512Mi"
-              cpu: "500m"
+              cpu: "1000m"
           args:
           - run
           - /scripts/baseline.js
