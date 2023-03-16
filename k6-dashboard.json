@@ -31,6 +31,7 @@
   "liveNow": false,
   "panels": [
     {
+      "collapsed": true,
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -38,71 +39,73 @@
         "y": 0
       },
       "id": 51,
-      "title": "Are these Metrics useful?  ",
-      "type": "row"
-    },
-    {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "GW79EcF4z"
-      },
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 2,
-        "w": 2,
-        "x": 0,
-        "y": 1
-      },
-      "id": 4,
-      "interval": "5m",
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "textMode": "auto"
-      },
-      "pluginVersion": "9.3.0",
-      "targets": [
+      "panels": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "GW79EcF4z"
           },
-          "editorMode": "code",
-          "expr": "sum(k6_http_reqs_total{scenario=\"$scenario\"})",
-          "interval": "",
-          "legendFormat": "sum",
-          "range": true,
-          "refId": "A"
+          "fieldConfig": {
+            "defaults": {
+              "color": {
+                "mode": "thresholds"
+              },
+              "mappings": [],
+              "thresholds": {
+                "mode": "absolute",
+                "steps": [
+                  {
+                    "color": "green",
+                    "value": null
+                  }
+                ]
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 2,
+            "w": 2,
+            "x": 0,
+            "y": 1
+          },
+          "id": 4,
+          "interval": "5m",
+          "options": {
+            "colorMode": "value",
+            "graphMode": "area",
+            "justifyMode": "auto",
+            "orientation": "auto",
+            "reduceOptions": {
+              "calcs": [
+                "lastNotNull"
+              ],
+              "fields": "",
+              "values": false
+            },
+            "textMode": "auto"
+          },
+          "pluginVersion": "9.3.0",
+          "targets": [
+            {
+              "datasource": {
+                "type": "prometheus",
+                "uid": "GW79EcF4z"
+              },
+              "editorMode": "code",
+              "expr": "sum(k6_http_reqs_total{scenario=\"$scenario\"})",
+              "interval": "",
+              "legendFormat": "sum",
+              "range": true,
+              "refId": "A"
+            }
+          ],
+          "title": "Total Requests",
+          "type": "stat"
         }
       ],
-      "title": "Total Requests",
-      "type": "stat"
+      "title": "Are these Metrics useful?  ",
+      "type": "row"
     },
     {
       "collapsed": false,
@@ -110,7 +113,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 3
+        "y": 1
       },
       "id": 53,
       "panels": [],
@@ -145,7 +148,7 @@
         "h": 4,
         "w": 7,
         "x": 0,
-        "y": 4
+        "y": 2
       },
       "id": 2,
       "interval": "5m",
@@ -219,7 +222,7 @@
         "h": 4,
         "w": 4,
         "x": 7,
-        "y": 4
+        "y": 2
       },
       "id": 49,
       "interval": "5m",
@@ -282,7 +285,7 @@
         "h": 4,
         "w": 5,
         "x": 11,
-        "y": 4
+        "y": 2
       },
       "id": 30,
       "options": {
@@ -343,7 +346,7 @@
         "h": 4,
         "w": 4,
         "x": 16,
-        "y": 4
+        "y": 2
       },
       "id": 47,
       "options": {
@@ -413,7 +416,7 @@
         "h": 4,
         "w": 4,
         "x": 20,
-        "y": 4
+        "y": 2
       },
       "id": 48,
       "interval": "5m",
@@ -466,7 +469,7 @@
             "axisPlacement": "auto",
             "barAlignment": 0,
             "drawStyle": "line",
-            "fillOpacity": 86,
+            "fillOpacity": 22,
             "gradientMode": "none",
             "hideFrom": {
               "legend": false,
@@ -474,6 +477,9 @@
               "viz": false
             },
             "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
             "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
@@ -511,7 +517,7 @@
         "h": 9,
         "w": 14,
         "x": 0,
-        "y": 8
+        "y": 6
       },
       "id": 38,
       "options": {
@@ -598,7 +604,7 @@
         "h": 9,
         "w": 6,
         "x": 14,
-        "y": 8
+        "y": 6
       },
       "id": 32,
       "options": {
@@ -645,303 +651,302 @@
       "type": "stat"
     },
     {
-      "collapsed": true,
+      "collapsed": false,
       "datasource": "GW79EcF4z",
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 17
+        "y": 15
       },
       "id": 16,
-      "panels": [
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "GW79EcF4z"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  }
-                ]
-              },
-              "unit": "ms"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 5,
-            "w": 9,
-            "x": 0,
-            "y": 5
-          },
-          "id": 42,
-          "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
-              "fields": "",
-              "values": false
-            },
-            "textMode": "auto"
-          },
-          "pluginVersion": "9.3.0",
-          "targets": [
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "GW79EcF4z"
-              },
-              "editorMode": "code",
-              "exemplar": false,
-              "expr": "avg(k6_http_req_${HttpMetricName}_p99{scenario=\"$scenario\",expected_response=\"true\", url=~\".*${domain}.*\"})",
-              "format": "time_series",
-              "instant": false,
-              "legendFormat": "",
-              "range": true,
-              "refId": "A"
-            }
-          ],
-          "title": "Response time (${HttpMetricName})_p99(avg)",
-          "type": "stat"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "GW79EcF4z"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  }
-                ]
-              },
-              "unit": "ms"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 5,
-            "w": 7,
-            "x": 9,
-            "y": 5
-          },
-          "id": 44,
-          "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
-              "fields": "",
-              "values": false
-            },
-            "textMode": "auto"
-          },
-          "pluginVersion": "9.3.0",
-          "targets": [
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "GW79EcF4z"
-              },
-              "editorMode": "code",
-              "expr": "max(k6_http_req_${HttpMetricName}_p99{scenario=\"$scenario\",expected_response=\"true\", url=~\".*${domain}.*\"})",
-              "range": true,
-              "refId": "A"
-            }
-          ],
-          "title": "Max (${HttpMetricName})_p99",
-          "type": "stat"
-        },
-        {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "GW79EcF4z"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "color": {
-                "mode": "thresholds"
-              },
-              "mappings": [],
-              "thresholds": {
-                "mode": "absolute",
-                "steps": [
-                  {
-                    "color": "green",
-                    "value": null
-                  }
-                ]
-              },
-              "unit": "ms"
-            },
-            "overrides": []
-          },
-          "gridPos": {
-            "h": 5,
-            "w": 8,
-            "x": 16,
-            "y": 5
-          },
-          "id": 46,
-          "options": {
-            "colorMode": "value",
-            "graphMode": "area",
-            "justifyMode": "auto",
-            "orientation": "auto",
-            "reduceOptions": {
-              "calcs": [
-                "lastNotNull"
-              ],
-              "fields": "",
-              "values": false
-            },
-            "textMode": "auto"
-          },
-          "pluginVersion": "9.3.0",
-          "targets": [
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "GW79EcF4z"
-              },
-              "editorMode": "code",
-              "expr": "min(k6_http_req_${HttpMetricName}_p99{scenario=\"$scenario\",expected_response=\"true\", url=~\".*${domain}.*\"})",
-              "range": true,
-              "refId": "A"
-            }
-          ],
-          "title": "Min (${HttpMetricName})_p99",
-          "type": "stat"
-        },
-        {
-          "aliasColors": {},
-          "bars": false,
-          "dashLength": 10,
-          "dashes": false,
-          "datasource": {
-            "type": "prometheus",
-            "uid": "GW79EcF4z"
-          },
-          "fieldConfig": {
-            "defaults": {
-              "unit": "ms"
-            },
-            "overrides": []
-          },
-          "fill": 1,
-          "fillGradient": 0,
-          "gridPos": {
-            "h": 10,
-            "w": 24,
-            "x": 0,
-            "y": 10
-          },
-          "hiddenSeries": false,
-          "id": 28,
-          "legend": {
-            "alignAsTable": true,
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "rightSide": true,
-            "show": true,
-            "sideWidth": 100,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 1,
-          "nullPointMode": "null",
-          "options": {
-            "alertThreshold": true
-          },
-          "percentage": false,
-          "pluginVersion": "9.3.0",
-          "pointradius": 2,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "spaceLength": 10,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "datasource": {
-                "type": "prometheus",
-                "uid": "GW79EcF4z"
-              },
-              "editorMode": "code",
-              "expr": "avg(k6_http_req_${HttpMetricName}_p99{scenario=\"${scenario}\", url=~\".*${domain}.*\"}) ",
-              "legendFormat": "${HttpMetricName}_P99",
-              "range": true,
-              "refId": "A"
-            }
-          ],
-          "thresholds": [],
-          "timeRegions": [],
-          "title": "K6 latency (${HttpMetricName})",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "$$hashKey": "object:154",
-              "format": "ms",
-              "logBase": 1,
-              "show": true
-            },
-            {
-              "$$hashKey": "object:155",
-              "format": "short",
-              "logBase": 1,
-              "show": true
-            }
-          ],
-          "yaxis": {
-            "align": false
-          }
-        }
-      ],
+      "panels": [],
       "title": "Http Metrics for (${HttpMetricName})",
       "type": "row"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "GW79EcF4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 9,
+        "x": 0,
+        "y": 16
+      },
+      "id": 42,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "GW79EcF4z"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "avg(k6_http_req_${HttpMetricName}_p99{scenario=\"$scenario\",expected_response=\"true\", url=~\".*${domain}.*\"})",
+          "format": "time_series",
+          "instant": false,
+          "legendFormat": "",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Response time (${HttpMetricName})_p99(avg)",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "GW79EcF4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 9,
+        "y": 16
+      },
+      "id": 44,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "GW79EcF4z"
+          },
+          "editorMode": "code",
+          "expr": "max(k6_http_req_${HttpMetricName}_p99{scenario=\"$scenario\",expected_response=\"true\", url=~\".*${domain}.*\"})",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Max (${HttpMetricName})_p99",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "GW79EcF4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 16
+      },
+      "id": 46,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "9.3.0",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "GW79EcF4z"
+          },
+          "editorMode": "code",
+          "expr": "min(k6_http_req_${HttpMetricName}_p99{scenario=\"$scenario\",expected_response=\"true\", url=~\".*${domain}.*\"})",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Min (${HttpMetricName})_p99",
+      "type": "stat"
+    },
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": {
+        "type": "prometheus",
+        "uid": "GW79EcF4z"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "fill": 1,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 21
+      },
+      "hiddenSeries": false,
+      "id": 28,
+      "legend": {
+        "alignAsTable": true,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": true,
+        "show": true,
+        "sideWidth": 100,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "alertThreshold": true
+      },
+      "percentage": false,
+      "pluginVersion": "9.3.0",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "GW79EcF4z"
+          },
+          "editorMode": "code",
+          "expr": "avg(k6_http_req_${HttpMetricName}_p99{scenario=\"${scenario}\", url=~\".*${domain}.*\"}) ",
+          "legendFormat": "${HttpMetricName}_P99",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "thresholds": [],
+      "timeRegions": [],
+      "title": "K6 latency (${HttpMetricName})",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "mode": "time",
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "$$hashKey": "object:154",
+          "format": "ms",
+          "logBase": 1,
+          "show": true
+        },
+        {
+          "$$hashKey": "object:155",
+          "format": "short",
+          "logBase": 1,
+          "show": true
+        }
+      ],
+      "yaxis": {
+        "align": false
+      }
     },
     {
       "collapsed": true,
@@ -949,7 +954,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 18
+        "y": 31
       },
       "id": 55,
       "panels": [
@@ -1332,13 +1337,13 @@
     ]
   },
   "time": {
-    "from": "now-30m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "k6 Load Testing Results (Prometheus)",
   "uid": "Uiph3ioPoxasi5Zeis",
-  "version": 35,
+  "version": 36,
   "weekStart": ""
 }
