@@ -49,7 +49,7 @@ spec:
               cpu: "1000m"
           args:
           - run
-          - /scripts/baseline.js
+          - /scripts/benchmark-k6.js
           - -u
           - "100"
           - -d
